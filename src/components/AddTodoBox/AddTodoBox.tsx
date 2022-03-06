@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './AddTodoBox.css';
 
 interface AddTodoBoxProps {
   onAddTodo: (task: string) => void;
@@ -19,6 +20,8 @@ function AddTodoBox({ onAddTodo }: AddTodoBoxProps) {
     <div className="add-todo-box-root">
       <input
         type="text"
+        className='styled-input'
+        id="add-todo-box-input"
         data-testid="add-todo-box-input"
         placeholder="What do you plan to get done..."
         onChange={(e) => setTodoText(e.target.value)}
@@ -27,6 +30,9 @@ function AddTodoBox({ onAddTodo }: AddTodoBoxProps) {
 
       <button
         type="submit"
+        className="styled-button"
+        data-variant="primary"
+        id="add-todo-box-button"
         data-testid="add-todo-box-button"
         disabled={todoText.length === 0}
         onClick={onAddTodoWrapperCb}

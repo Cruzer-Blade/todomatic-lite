@@ -1,0 +1,9 @@
+.add-todo-box-root {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+#add-todo-box-input {
+  flex-grow: 1;
+}
