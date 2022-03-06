@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FilterOption, TodoItem } from './types';
 import AddTodoBox from './components/AddTodoBox/AddTodoBox';
+import FilterTabGroup from './components/FilterTabGroup/FilterTabGroup';
 import TodoList from './components/TodoList/TodoList';
 import './App.css';
 
@@ -48,6 +49,12 @@ function App() {
   return (
     <div className="app-root">
       <AddTodoBox onAddTodo={() => {}} />
+
+      <FilterTabGroup
+        currentFilter={filter}
+        onFilterChange={setFilter}
+      />
+
       <TodoList
         todoList={todoList}
         filter={filter}
