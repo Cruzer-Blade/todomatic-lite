@@ -13,7 +13,7 @@ interface TodoListProps {
 function TodoList({ todoList, filter, onEdit, onDelete, onToggleCompletion }: TodoListProps) {
   const filteredTodoList = getFilteredList(todoList, filter);
 
-  if (todoList.length === 0) {
+  if (filteredTodoList.length === 0) {
     return (
       <div data-testid="todo-list-empty">
         Nothing to show for now...
