@@ -1,5 +1,6 @@
 {
-  "name": "todomatic-lite-tdd",
+  "name": "todomatic-lite",
+  "description": "Stripped down version of Todomatic (enforced TDD approach)",
   "private": true,
   "version": "0.0.0",
   "scripts": {
