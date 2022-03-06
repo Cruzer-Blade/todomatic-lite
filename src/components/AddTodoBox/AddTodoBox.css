@@ -2,8 +2,15 @@
   display: flex;
   flex-direction: row;
   gap: 0.5em;
+  margin-bottom: 2rem;
 }
 
 #add-todo-box-input {
   flex-grow: 1;
+  width: inherit;
+  padding: 1rem 1rem;
+}
+
+#add-todo-box-button {
+  padding: 1rem 1.5rem;
 }
