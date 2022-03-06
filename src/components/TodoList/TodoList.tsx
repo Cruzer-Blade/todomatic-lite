@@ -29,7 +29,7 @@ function TodoList({ todoList, filter, onEdit, onDelete, onToggleCompletion }: To
           todoItem={todoItem}
           onEdit={() => onEdit(
             todoItem.id,
-            prompt(`Edit item "${todoItem.task}"`, todoItem.task) || '',
+            prompt(`Edit item "${todoItem.task}"`, todoItem.task) || todoItem.task,
           )}
           onDelete={() => onDelete(todoItem.id)}
           ontoggleCompletion={() => onToggleCompletion(todoItem.id)}
