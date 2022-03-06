@@ -64,6 +64,7 @@ button.styled-button {
   color: var(--color-fg);
   cursor: pointer;
   transition: all 250ms ease;
+  padding: 0.5rem 1rem;
 }
 
 button.styled-button[data-variant=primary] {

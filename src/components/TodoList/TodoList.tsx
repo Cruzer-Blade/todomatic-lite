@@ -1,6 +1,7 @@
 import React from 'react';
 import { FilterOption, TodoItem } from '../../types';
 import TodoListItem from '../TodoListItem/TodoListItem';
+import './TodoList.css';
 
 interface TodoListProps {
   todoList: TodoItem[];
@@ -22,7 +23,7 @@ function TodoList({ todoList, filter, onEdit, onDelete, onToggleCompletion }: To
   }
 
   return (
-    <ul>
+    <ul className="todo-list-root">
       {filteredTodoList.map((todoItem) => (
         <TodoListItem
           key={todoItem.id}

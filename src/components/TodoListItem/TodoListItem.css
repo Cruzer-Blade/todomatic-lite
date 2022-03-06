@@ -1,0 +1,22 @@
+.todo-list-item {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.todo-list-item-primary-content {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.todo-list-item-actions-group {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}

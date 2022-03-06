@@ -1,5 +1,6 @@
 import React from 'react';
 import { TodoItem } from '../../types';
+import './TodoListItem.css';
 
 interface TodoListItemProps {
   todoItem: TodoItem;
@@ -10,8 +11,8 @@ interface TodoListItemProps {
 
 function TodoListItem({ todoItem, onDelete, onEdit, ontoggleCompletion }: TodoListItemProps) {
   return (
-    <li className='todo-list-item'>
-      <div>
+    <li className="todo-list-item">
+      <div className="todo-list-item-primary-content">
         <input
           id={`todo-list-item-${todoItem.id}`}
           type="checkbox"
@@ -26,6 +27,7 @@ function TodoListItem({ todoItem, onDelete, onEdit, ontoggleCompletion }: TodoLi
 
       <div className="todo-list-item-actions-group">
         <button
+          className="styled-button"
           type="button"
           data-testid="todo-list-item-edit-button"
           onClick={onEdit}
@@ -34,6 +36,7 @@ function TodoListItem({ todoItem, onDelete, onEdit, ontoggleCompletion }: TodoLi
         </button>
 
         <button
+          className="styled-button"
           type="button"
           data-testid="todo-list-item-delete-button"
           onClick={onDelete}
