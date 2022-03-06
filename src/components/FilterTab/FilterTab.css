@@ -1,0 +1,26 @@
+.filter-tab-root {
+  position: relative;
+  width: 100%;
+  padding: 1em;
+  border: none;
+  outline: none;
+  font: inherit;
+  background-color: rgba(255, 255, 255, 0.025);
+  color: var(--color-fg);
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+.filter-tab-root:hover, .filter-tab-root:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.filter-tab-root[data-active=true]::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-accent);
+  height: 0.2rem;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { FilterOption } from '../../types';
+import './FilterTab.css';
 
 interface FilterTabProps {
   filter: FilterOption;
@@ -26,6 +27,7 @@ function FilterTab({ filter, active, onFilterChange }: FilterTabProps) {
 
   return (
     <button
+      className="filter-tab-root"
       role="tab"
       data-active={active}
       onClick={onFilterChange}

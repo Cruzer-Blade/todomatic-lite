@@ -1,6 +1,7 @@
 import React from 'react';
 import { FilterOption } from '../../types';
 import FilterTab from '../FilterTab/FilterTab';
+import './FilterTabGroup.css';
 
 interface FilterTabGroupProps {
   currentFilter: FilterOption;
@@ -11,7 +12,7 @@ function FilterTabGroup({ currentFilter, onFilterChange }: FilterTabGroupProps) 
   const { all, pending, completed } = FilterOption;
 
   return (
-    <div role="tablist">
+    <div className="filter-tab-group-root" role="tablist">
       {[all, pending, completed].map((filter) => (
         <FilterTab
           key={filter}

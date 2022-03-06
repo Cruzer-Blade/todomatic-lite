@@ -1,0 +1,9 @@
+.filter-tab-group-root {
+  --margin-vertical: 1rem;
+
+  display: flex;
+  flex-direction: row;
+  gap: 0.25em;
+  margin-top: var(--margin-vertical);
+  margin-bottom: var(--margin-vertical);
+}
