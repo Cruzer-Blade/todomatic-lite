@@ -42,6 +42,26 @@ describe('Basic component rendering', () => {
     expect(emptyStateElement).toBeInTheDocument();
   });
 
+  it('should display an empty state when no pending todos are present', async () => {
+    renderTodoList(
+      mockTodoItems.filter(todoItem => todoItem.completed),
+      FilterOption.pending,
+    );
+
+    const emptyStateElement = await screen.findByTestId('todo-list-empty');
+    expect(emptyStateElement).toBeInTheDocument();
+  });
+
+  it('should display an empty state when no completed todos are present', async () => {
+    renderTodoList(
+      mockTodoItems.filter(todoItem => !todoItem.completed),
+      FilterOption.completed,
+    );
+
+    const emptyStateElement = await screen.findByTestId('todo-list-empty');
+    expect(emptyStateElement).toBeInTheDocument();
+  });
+
   it('should be able to properly display provided todos', async () => {
     renderTodoList(mockTodoItems);
     const taskNames = mockTodoItems.map((todoItem) => todoItem.task);
