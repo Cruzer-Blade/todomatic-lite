@@ -32,7 +32,7 @@ function TodoListItem({ todoItem, onDelete, onEdit, ontoggleCompletion }: TodoLi
           data-testid="todo-list-item-edit-button"
           onClick={onEdit}
         >
-          Edit Task
+          Edit
         </button>
 
         <button
@@ -41,7 +41,7 @@ function TodoListItem({ todoItem, onDelete, onEdit, ontoggleCompletion }: TodoLi
           data-testid="todo-list-item-delete-button"
           onClick={onDelete}
         >
-          Delete Task
+          Delete
         </button>
       </div>
     </li>
