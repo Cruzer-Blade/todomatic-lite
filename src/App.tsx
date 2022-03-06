@@ -9,6 +9,14 @@ function App() {
   const [todoList, setTodoList] = useState<TodoItem[]>([]);
   const [filter, setFilter] = useState<FilterOption>(FilterOption.all);
 
+  const addTodo = (task: string) => {
+    setTodoList([...todoList, {
+        id: Date.now().toString(),
+        task,
+        completed: false,
+    }]);
+  }
+
   const editTodo = (
     id: string,
     updatedTodoCallback: (todoItem: TodoItem) => Omit<TodoItem, "id">
@@ -48,7 +56,7 @@ function App() {
 
   return (
     <div className="app-root">
-      <AddTodoBox onAddTodo={() => {}} />
+      <AddTodoBox onAddTodo={(task) => addTodo(task)} />
 
       <FilterTabGroup
         currentFilter={filter}
