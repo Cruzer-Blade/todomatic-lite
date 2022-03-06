@@ -55,7 +55,7 @@ function App() {
   }
 
   return (
-    <div className="app-root">
+    <div id="app-root">
       <AddTodoBox onAddTodo={(task) => addTodo(task)} />
 
       <FilterTabGroup

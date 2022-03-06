@@ -16,6 +16,15 @@ body {
   box-sizing: border-box;
 }
 
+#app-root {
+  --vertical-padding: 1em;
+
+  max-width: 900px;
+  margin: auto;
+  padding-top: var(--vertical-padding);
+  padding-bottom: var(--vertical-padding);
+}
+
 /* #region input */
 
 input.styled-input {
