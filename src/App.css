@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --color-bg: #121212;
+  --color-fg: #ffffff;
+  --color-accent: #2279db;
+  --color-on-accent: #090909;
+  --color-error: #ef5350;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: 'Space Mono', 'Segoe UI', 'Ubuntu', 'Source Sans Pro', 'monospace';
+  box-sizing: border-box;
+}
+
+/* #region input */
+
+input.styled-input {
+  --vertical-padding: 0.5em;
+  --horizontal-padding: 1em;
+
+  width: calc(100% - (var(--horizontal-padding) * 2));
+  padding: var(--vertical-padding) var(--horizontal-padding);
+  font: inherit;
+  color: var(--color-fg);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  outline: none;
+  border-radius: 0.5em;
+  transition: all 250ms ease;
+}
+
+input.styled-input:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+input.styled-input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 1.5em rgba(34, 121, 219, 0.25);
+}
+
+/* #endregion */
+
+/* #region button */
+
+button.styled-button {
+  font: inherit;
+  border-radius: 0.5em;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-fg);
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+button.styled-button[data-variant=primary] {
+  background-color: var(--color-accent);
+  color: var(--color-on-accent);
+  font-weight: bold;
+}
+
+button.styled-button:disabled {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.2);
+  cursor: default;
+}
+
+button.styled-button:focus-visible {
+  outline: 2px solid var(--color-accent);
+}
+
+button.styled-button:hover {
+  opacity: 0.8;
+}
+
+button.styled-button:active {
+  opacity: 0.6;
+}
+
+/* #endregion */
