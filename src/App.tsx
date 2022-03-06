@@ -10,11 +10,13 @@ function App() {
   const [filter, setFilter] = useState<FilterOption>(FilterOption.all);
 
   const addTodo = (task: string) => {
-    setTodoList([...todoList, {
-        id: Date.now().toString(),
-        task,
-        completed: false,
-    }]);
+    const newTodoItem = {
+      id: Date.now().toString(),
+      task,
+      completed: false,
+    };
+
+    setTodoList([newTodoItem, ...todoList]);
   }
 
   const editTodo = (
