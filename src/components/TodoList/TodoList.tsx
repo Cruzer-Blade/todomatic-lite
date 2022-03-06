@@ -5,7 +5,7 @@ import TodoListItem from '../TodoListItem/TodoListItem';
 interface TodoListProps {
   todoList: TodoItem[];
   filter: FilterOption;
-  onEdit: (id: TodoItem['id'], updatedTodo: Omit<TodoItem, 'id'>) => void;
+  onEdit: (id: TodoItem['id'], updatedName: string) => void;
   onDelete: (id: TodoItem['id']) => void;
   onToggleCompletion: (id: TodoItem['id']) => void;
 }
@@ -27,10 +27,10 @@ function TodoList({ todoList, filter, onEdit, onDelete, onToggleCompletion }: To
         <TodoListItem
           key={todoItem.id}
           todoItem={todoItem}
-          onEdit={() => onEdit(todoItem.id, {
-            task: prompt(`Edit item "${todoItem.task}"`, todoItem.task) || '',
-            completed: todoItem.completed,
-          })}
+          onEdit={() => onEdit(
+            todoItem.id,
+            prompt(`Edit item "${todoItem.task}"`, todoItem.task) || '',
+          )}
           onDelete={() => onDelete(todoItem.id)}
           ontoggleCompletion={() => onToggleCompletion(todoItem.id)}
         />
